@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/main_screen_main_layout_padding"
     tools:context=".MainActivity">
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_screen_image_height"
+        android:contentDescription="@string/image"
+        android:src="@drawable/img_main_page"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/llStart"
+        android:layout_width="@dimen/start_button_size"
+        android:layout_height="@dimen/start_button_size"
+        android:layout_marginTop="@dimen/start_button_margin_top"
+        android:background="@drawable/item_color_accent_border_ripple_background"
+        android:gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_button_text"
+            android:textColor="?colorPrimary"
+            android:textSize="@dimen/start_button_label_textsize"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>
